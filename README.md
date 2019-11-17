@@ -13,9 +13,9 @@ This quiz was created for a web development bootcamp assignment. Click start to 
 3. viewhighscores - all relevant scripts for highscore page
 
 ## Future Improvements
-+clean up scripts for less code
-+improve look of site
-+add sounds with correct and incorrect answers
+* clean up scripts for less code
+* improve look of site
+* add sounds with correct and incorrect answers
 
 # MIT License
 
