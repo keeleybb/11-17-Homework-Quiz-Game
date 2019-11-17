@@ -1,11 +1,16 @@
 # 11-17-Homework-Quiz-Game
-This quiz was created for a web development bootcamp assignment. By clicking start, you will 
+This quiz was created for a web development bootcamp assignment. Click start to begin the game. Answer quickly to improve your score. Once done, save your best scores to a highscore page. 
 
-There are two html pages:
+## There are two html pages:
 1. index.html 
 + circulates through questions and offers a final page to add your best scores. 
 2. highscores.html
 + displays scores from local storage
+
+## Javascript Files
+1. questions - holds all new questions
+2. scripts - all relevant scripts for index.html
+3. viewhighscores - all relevant scripts for highscore page
 
 
 
