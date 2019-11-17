@@ -1,39 +1,18 @@
-// //create an array of 5 questions
-// var questions = [
-//   {
-//     title: "Commonly used data types DO NOT include:",
-//     choices: ["strings", "booleans", "alerts", "numbers"],
-//     answer: "alerts"
-//   },
-//   {
-//     title: "The condition in an if / else statement is enclosed within ____.",
-//     choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-//     answer: "parentheses"
-//   },
-//   {
-//     title: "In what HTML tag do we put javascript code?",
-//     choices: ["<javascript>", "<script>", "<body>", "<head>"],
-//     answer: "<script>"
-//   }
-// ];
-localStorage.removeItem('people');
 //Variables
 var qIndex = 0; //Starting point for questions
-var timeleft = 45; //Timer variable 
+var timeleft = 15 * questions.length; //Timer variable 
 var downloadTimer;
 
 //Button Vars
 var startButton = document.querySelector("#start");
 var nextButton = document.querySelectorAll(".next");
 var finalScore = document.getElementById("final-score");
-var viewScores = document.getElementById("view-scores");
 
 
 //Hidden Screens
 document.getElementById("questionScreen").style.display = 'none';
 document.getElementById("finalScreen").style.display = 'none';
 document.getElementById("yesOrNo").style.display = 'none';
-document.getElementById("highscoreScreen").style.display = 'none';
 
 
 
@@ -53,7 +32,7 @@ function betterCount(){
 //Click Start Button
 startButton.addEventListener("click", function() {
   qIndex=0;
-  timeleft=45;
+  timeleft= 15 * questions.length;
   document.getElementById("countdown").innerText = "45 seconds remaining";
   downloadTimer = setInterval(betterCount, 1000); 
   nextQuestion();
@@ -111,102 +90,30 @@ function nextQuestion() {
 
 //ALL THE STUFF FOR HIGHSCORE
 var addBtn = document.getElementById("add-btn");
-var nameEl = document.getElementById("name").value;
 var peopleTable = document.querySelector("#logNames");
 
-// var highscore = localStorage.getItem("highscore");
 var people = [];
-var peopleTD;
-var allPeople = JSON.parse(localStorage.getItem("people")) || people;;
-
-//Writing Names and Scores to Screen
-// function renderHighscores() {
-
-// peopleTable.innerHTML = ''; // emptying out the previous table contents
-
-//   for (var i = 0; i < people.length; i++) {
-
-//   console.log("Is this going? " + people[i].name + people[i].score);
-//   peopleTD = document.createElement("p"); // a td for the bookmark link
-//   peopleTD.innerHTML = people[i].name + " - " + people[i].score;
-
-//   peopleTable.appendChild(peopleTD);
-
-//   }}
-
-
-// function updateStorage() {
-//   localStorage.setItem("people", JSON.stringify(allPeople));
-// };
+var peopleTD; 
+var allPeople = JSON.parse(localStorage.getItem("people")) || people;
 
 //For FinalScreen
 function addPersonToList(event) {
-  // When the `Add Person` button is clicked, 
-  // the person is added to both the people array and the list elements.
   event.preventDefault();
-  document.getElementById("finalScreen").style.display = 'none';
-  document.getElementById("highscoreScreen").style.display = 'block';
-
   var nameEl = document.getElementById("name").value;
-  var scoreEl = timeleft; 
 
   var newPerson= {
     name: nameEl,
-    score: scoreEl
+    score: timeleft
   }
 
  // clearing out/resetting the form after info is collected
-  //  $("#name").reset();  // unique id of the person
+   document.getElementById("name").innerText = "name";
    allPeople.push(newPerson); // pushing new bookmark to array
    localStorage.setItem("people", JSON.stringify(allPeople));
-    console.log(allPeople);  
+   console.log(allPeople);  
 
-
-  function renderHighscores() {
-
-    peopleTable.innerHTML = ''; // emptying out the previous table contents
-
-      for (var i = 0; i < people.length; i++) {
-    
-      console.log("Is this going? " + people[i].name + people[i].score);
-      peopleTD = document.createElement("p"); // a td for the bookmark link
-      peopleTD.innerHTML = people[i].name + " - " + people[i].score;
-    
-      peopleTable.prepend(peopleTD);
-    
-      }}
-    
-  renderHighscores(people);
+    window.location.href = "highscores.html";
 };
 
 //Calling the add button on click
 addBtn.addEventListener("click", addPersonToList); //Passing Field to local Storage
-
-
-$("#goBack").on("click", function() {
-  document.getElementById("countdown").innerText = "Timer: 0";
-  document.getElementById("startScreen").style.display = 'block';
-  document.getElementById("highscoreScreen").style.display = 'none';
-});
-
-
-//CLEAR SCORES BUTTON
-var clearScores = document.getElementById("clearScores");
-clearScores.addEventListener("click", function(){
-  peopleTable.innerHTML = ''; // empty names from page
-  newPerson = "";
-  allPeople = [];
-  people = [];  //empty array
-  localStorage.clear();
-  allPeople = JSON.parse(localStorage.getItem("people")) || people;
-  console.log("Storage Cleared");
-});
-
-
-viewScores.addEventListener("click", function(){
-document.getElementById("startScreen").style.display = 'none';
-document.getElementById("questionScreen").style.display = 'none';
-document.getElementById("finalScreen").style.display = 'none';
-document.getElementById("highscoreScreen").style.display = 'block';
-});
-

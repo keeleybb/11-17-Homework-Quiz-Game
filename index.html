@@ -17,7 +17,7 @@
     <div class="col-lg-12 col-md-12 col-sm-12 py-4 px-5">
         <div class="row">
             <div class="col-lg-6 col-md-5 col-sm-12 sm-center">
-                <h1 id="view-scores">View High Scores</h1>
+                <h1 id="view-scores"><a href="highscores.html">View High Scores</a></h1>
             </div>
             <div class="col-lg-6 col-md-5 col-sm-12 text-right sm-center">
                 <h1 id="countdown">Time: 0</h1>
@@ -41,20 +41,40 @@
                 </div>
             </div>
             <!--Question Screen Displayed-->
-            <div id="questionScreen">
-                    <h1 id="questionSlot" class="text-center">Code Challenge</h1>
-                    <div class="col-md-12 text-center">
-                    <button type="button" id="answerOne" class="btn btn-secondary btn-lg py-2 px-5 text-center next">Option 1</button>
-                    <button type="button" id="answerTwo" class="btn btn-secondary btn-lg py-2 px-5 text-center next">Option 2</button>
-                    <button type="button" id="answerThree" class="btn btn-secondary btn-lg py-2 px-5 text-center next">Option 3</button>
-                    <button type="button" id="answerFour" class="btn btn-secondary btn-lg py-2 px-5 text-center next">Option 4</button>
+            <div id="questionScreen" class="text-center mx-5">
+                    <h1 id="questionSlot">Code Challenge</h1>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <button type="button" id="answerOne" class="btn btn-secondary btn-lg py-2 my-2 text-center btn-width sm-width next">Option 1</button>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <button type="button" id="answerTwo" class="btn btn-secondary btn-lg py-2 my-2 text-center btn-width sm-width next">Option 2</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <button type="button" id="answerThree" class="btn btn-secondary btn-lg py-2 my-2 text-center btn-width sm-width next">Option 3</button>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <button type="button" id="answerFour" class="btn btn-secondary btn-lg py-2 my-2 text-center btn-width sm-width next">Option 4</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div id="yesOrNo" class="col-md-12 text-center">
                         <h3 id="yesOrNo">
                             <hr>
                             <h3 id="answerSlot"></h3>
                         </h3>
-                  </div>
+                    </div>
             </div>
         <!--Ender-->
         <!--Final Screen Displayed-->
@@ -64,18 +84,6 @@
                     <p id="final-score">Your Score is: </p>
                     <input placeholder="name" id="name" />
                     <button id="add-btn">Add Person</button>
-                </div>
-        </div>
-        <!--Ender-->
-        <!--Final Screen Displayed-->
-        <div id="highscoreScreen">
-                <div class="col-md-12 text-center">
-                    <h1>Highscores</h1>
-                    <div id="logNames" class="col-md-12 text-center pt-2">
-                    </div>
-                        <button type="button" id="goBack" class="btn btn-secondary btn-lg py-2 px-5 text-center">Go Back</button>
-                        <button type="button" id="clearScores" class="btn btn-secondary btn-lg py-2 px-5 text-center">Clear Highscores</button>
-    
                 </div>
         </div>
         <!--Ender-->
