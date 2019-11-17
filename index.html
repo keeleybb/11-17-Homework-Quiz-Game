@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Code Quiz</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+<div class="row opaque-bg">
+    <div class="col-lg-12 col-md-12 col-sm-12 py-4 px-5">
+        <div class="row">
+            <div class="col-lg-6 col-md-5 col-sm-12 sm-center">
+                <h1 id="view-scores">View High Scores</h1>
+            </div>
+            <div class="col-lg-6 col-md-5 col-sm-12 text-right sm-center">
+                <h1 id="countdown">Time: 0</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row mx-5 my-5">
+        <div class="col-md-12 opaque-bg py-5 my-5">
+            <!--First Screen Displayed-->
+            <div id="startScreen">
+                <h1 class="text-center">Code Challenge</h1>
+                <h3 id="directions" class="text-center">Answer the questions before the timer runs out.</h3>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <button type="button" id="start" class="btn btn-secondary btn-lg py-2 px-5 text-center">Start Quiz</button>
+                    </div>
+                </div>
+            </div>
+            <!--Question Screen Displayed-->
+            <div id="questionScreen">
+                    <h1 id="questionSlot" class="text-center">Code Challenge</h1>
+                    <div class="col-md-12 text-center">
+                    <button type="button" id="answerOne" class="btn btn-secondary btn-lg py-2 px-5 text-center next">Option 1</button>
+                    <button type="button" id="answerTwo" class="btn btn-secondary btn-lg py-2 px-5 text-center next">Option 2</button>
+                    <button type="button" id="answerThree" class="btn btn-secondary btn-lg py-2 px-5 text-center next">Option 3</button>
+                    <button type="button" id="answerFour" class="btn btn-secondary btn-lg py-2 px-5 text-center next">Option 4</button>
+                    </div>
+                    <div id="yesOrNo" class="col-md-12 text-center">
+                        <h3 id="yesOrNo">
+                            <hr>
+                            <h3 id="answerSlot"></h3>
+                        </h3>
+                  </div>
+            </div>
+        <!--Ender-->
+        <!--Final Screen Displayed-->
+        <div id="finalScreen">
+                <h1 id="finalmessage" class="text-center">All Done</h1>
+                <div class="col-md-12 text-center">
+                    <p id="final-score">Your Score is: </p>
+                    <input placeholder="name" id="name" />
+                    <button id="add-btn">Add Person</button>
+                </div>
+        </div>
+        <!--Ender-->
+        <!--Final Screen Displayed-->
+        <div id="highscoreScreen">
+                <div class="col-md-12 text-center">
+                    <h1>Highscores</h1>
+                    <div id="logNames" class="col-md-12 text-center pt-2">
+                    </div>
+                        <button type="button" id="goBack" class="btn btn-secondary btn-lg py-2 px-5 text-center">Go Back</button>
+                        <button type="button" id="clearScores" class="btn btn-secondary btn-lg py-2 px-5 text-center">Clear Highscores</button>
+    
+                </div>
+        </div>
+        <!--Ender-->
+        </div>
+    </div>
+</div>
+
+    <script src="assets/js/questions.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
