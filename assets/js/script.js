@@ -33,7 +33,7 @@ function betterCount(){
 startButton.addEventListener("click", function() {
   qIndex=0;
   timeleft= 15 * questions.length;
-  document.getElementById("countdown").innerText = "45 seconds remaining";
+  document.getElementById("countdown").innerText = timeleft + " seconds remaining";
   downloadTimer = setInterval(betterCount, 1000); 
   nextQuestion();
   document.getElementById("startScreen").style.display = 'none';
