@@ -3,9 +3,9 @@ This quiz was created for a web development bootcamp assignment. By clicking sta
 
 There are two html pages:
 1. index.html 
-..* circulates through questions and offers a final page to add your best scores. 
++ circulates through questions and offers a final page to add your best scores. 
 2. highscores.html
-..* displays scores from local storage
++ displays scores from local storage
 
 
 
